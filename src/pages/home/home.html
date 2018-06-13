@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>MO App</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding align="center">
+<ion-label color="primary"><h3>Enter the first mobile<br>number codes</h3></ion-label> <br> <br>
+  <form [formGroup]="phone" (ngSubmit)="phoneForm()">
+    <ion-list>
+    <ion-item>
+      	<ion-icon name="call" item-left></ion-icon>
+  			<ion-label stacked><h2>Enter code number: </h2></ion-label><hr>
+  		<ion-input type="text" placeholder="+255714" formControlName="code"></ion-input>
+    </ion-item>
+    
+  </ion-list>
+  <button ion-button color="primary" type="submit" [disabled]="!phone.valid"> Submit</button>
+  </form>
+ 
+    
+</ion-content>
